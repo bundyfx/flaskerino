@@ -1,0 +1,11 @@
+version: 0.0
+os: linux
+files:
+  - source: .
+    destination: /var/www/
+hooks:
+  BeforeInstall:
+    - location: pip install -e .
+  ApplicationStart:
+    - location: export FLASK_APP=flaskerino/__init__.py && flask run
+      timeout: 3600
