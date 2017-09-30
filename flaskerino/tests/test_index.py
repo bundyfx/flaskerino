@@ -36,13 +36,10 @@ class BasicTests(unittest.TestCase):
         self.assertEqual(len(fetch_images()), 4)
 
     # test fetch_images() objects
-    def test_images_detail(self):
+    def test_images_width(self):
         rv = fetch_images()
         for item in rv:
             assert item['width'] < 500
-            assert b'.jpg' in item['image_path']
-            assert b'.jpg' in item['thumb_path']
-            assert "" != item['name']
 
 
 if __name__ == "__main__":
