@@ -1,0 +1,17 @@
+version: 0.2
+
+env:
+  variables:
+    FLASK_APP: "flaskerino/__init__.py"
+    FLASK_DEBUG: "true"
+phases:
+  install:
+    commands:
+      - pip install -e .
+  pre_build:
+    commands:
+      - nose2 -v
+  build:
+    commands:
+      - echo Entered the build phase...
+
