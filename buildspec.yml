@@ -7,10 +7,11 @@ env:
 phases:
   install:
     commands:
+      - pip install --upgrade pip
       - pip install -e .
   pre_build:
     commands:
-      - nose2 -v
+      - cd flaskerino && nose2 -v
   build:
     commands:
       - echo Entered the build phase...
