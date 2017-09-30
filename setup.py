@@ -1,8 +1,8 @@
 from setuptools import setup
 
 setup(
-    name='portfoliomg',
-    packages=['portfoliomg'],
+    name='flaskerino',
+    packages=['flaskerino'],
     include_package_data=True,
     install_requires=[
         'flask',
