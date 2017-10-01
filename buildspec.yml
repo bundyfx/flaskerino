@@ -12,3 +12,7 @@ phases:
     commands:
       - find . -name "*.py" -exec pylint '{}' \;
       - python flaskerino/tests/test_index.py -v
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: yes
