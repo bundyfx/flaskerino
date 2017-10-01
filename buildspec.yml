@@ -11,7 +11,7 @@ phases:
   pre_build:
     commands:
       - find . -name "*.py" -exec pylint '{}' \;
-      - python flaskerino/tests/test_index.py -v
+      - cd flaskerino && python tests/test_index.py -v
 artifacts:
   files:
     - '**/*'
