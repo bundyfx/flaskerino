@@ -1,15 +1,14 @@
 import os
 import unittest
+import sys
+
+# Append the above path to allow us to relative import the below
+sys.path.append('.')
 
 from flaskerino import app
-from flaskerino.views import fetch_images
+from flaskerino import fetch_images
 
 class BasicTests(unittest.TestCase):
-
-    ############################
-    #### setup and teardown ####
-    ############################
-
     # executed prior to each test
     def setUp(self):
         self.app = app.test_client()
@@ -40,7 +39,6 @@ class BasicTests(unittest.TestCase):
         rv = fetch_images()
         for item in rv:
             assert item['width'] < 500
-
 
 if __name__ == "__main__":
     unittest.main()
