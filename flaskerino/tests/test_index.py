@@ -35,7 +35,7 @@ class BasicTests(unittest.TestCase):
     def test_image_count(self):
         self.assertEqual(len(fetch_images()), 4)
 
-    # test fetch_images() objects
+    # test fetch_images() width
     def test_images_width(self):
         rv = fetch_images()
         for item in rv:
@@ -44,4 +44,3 @@ class BasicTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
