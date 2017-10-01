@@ -7,10 +7,8 @@ phases:
   install:
     commands:
       - pip install --upgrade pip
-      - pip install -e .
+      - pip install -r dev-requirements.txt
   pre_build:
     commands:
+      - find . -name "*.py" -exec pylint '{}' \;
       - python flaskerino/tests/test_index.py -v
-  build:
-    commands:
-      - echo Entered the build phase...

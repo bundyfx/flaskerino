@@ -5,7 +5,6 @@ setup(
     packages=['flaskerino'],
     include_package_data=True,
     install_requires=[
-        'flask',
-        'nose2'
+        'flask'
     ],
 )
