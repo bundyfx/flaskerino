@@ -4,7 +4,12 @@ files:
   - source: .
     destination: /var/www/
 hooks:
-  BeforeInstall:
-    - location: pip install -e .
+  ApplicationStop:
+    - location: deployment/application_stop.sh
+      timeout: 30
   ApplicationStart:
-    - location: export FLASK_APP=flaskerino.py && flask run
+    - location: deployment/application_start.sh
+      timeout: 30
+  ValidateService:
+    - location: deployment/validate.sh
+      timeout: 30
