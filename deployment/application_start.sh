@@ -1,4 +1,5 @@
 #!/bin/bash
-pip install -e ..
+echo $(pwd)
+pip install -e .
 export FLASK_APP=flaskerino/flaskerino.py
 flask run
