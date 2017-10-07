@@ -1,8 +1,5 @@
 version: 0.2
 
-env:
-  variables:
-    FLASK_APP: "flaskerino/__init__.py"
 phases:
   install:
     commands:
