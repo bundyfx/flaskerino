@@ -1,3 +1,3 @@
 #!/bin/bash
-export FLASK_APP=flaskerino.py
-cd ../flaskerino && flask run
+export FLASK_APP=flaskerino/flaskerino.py
+flask run
