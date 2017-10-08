@@ -11,4 +11,5 @@ phases:
       - cd flaskerino && python tests/test_index.py -v
 artifacts:
   files:
-    - '**/*'
+    - '*'
+  discard-paths: yes
